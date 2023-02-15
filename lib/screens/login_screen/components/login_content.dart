@@ -54,9 +54,14 @@ class _LoginContentState extends State<LoginContent>
 
   Widget loginButton(String title) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 135, vertical: 16),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 135,
+        vertical: 16,
+      ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          //Write your logic here for login button
+        },
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(vertical: 14),
           backgroundColor: kSecondaryColor,
@@ -77,7 +82,10 @@ class _LoginContentState extends State<LoginContent>
 
   Widget orDivider() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 130, vertical: 8),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 130,
+        vertical: 8,
+      ),
       child: Row(
         children: [
           Flexible(
@@ -113,9 +121,26 @@ class _LoginContentState extends State<LoginContent>
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset('assets/icons/facebook.png'),
+          InkWell(
+            onTap: () {
+              //Write your facebook sign up logic
+            },
+            child: Image.asset('assets/icons/facebook.png'),
+          ),
           const SizedBox(width: 24),
-          Image.asset('assets/icons/google.png'),
+          InkWell(
+            onTap: () {
+              //Write your google sign up logic
+            },
+            child: Image.asset('assets/icons/google.png'),
+          ),
+          const SizedBox(width: 24),
+          InkWell(
+            onTap: () {
+              //Write your apple sign up logic
+            },
+            child: Image.asset('assets/icons/apple.png'),
+          ),
         ],
       ),
     );
@@ -125,7 +150,9 @@ class _LoginContentState extends State<LoginContent>
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 110),
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          //Write your logic for forgot password
+        },
         child: const Text(
           'Forgot Password?',
           style: TextStyle(
